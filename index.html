@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Juego de preguntas</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body> 
+
+        <header>
+            <h4 id="view-high-scores">Ver tabla de puntajes</h4> 
+            <h4 class="timer">Tiempo: <span id="timer"></span></h4>
+        </header>
+
+        <div id="starter-container" class="show">
+            <div class="container start">
+                <h1>Reto de preguntas</h1>  
+               <p> Intenta responder las siguientes preguntas relacionadas a programación dentro del limite de tiempo! 
+                    Las respuestas correctas valen <b>7 puntos</b>!
+                    Ten en cuenta que cada respuesta incorrecta seras penalizado con <b>2 puntos</b> y <b>3 segundos!</b>
+                </p>
+                <button class="btn startend" id="start-game">Iniciar reto</button>
+            </div>    
+        </div>
+
+        <div id="question-container" class="hide">
+            <div class="container questions">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+        </div>
+
+        <div id="end-container" class="hide">
+           <div class="container end">
+            <div id=score-banner>
+                <h1>Has terminado!</h1>
+            </div>  
+            <form id="initials-form" class="initials">
+              <p> Ingresar iniciales:
+                <input type="text" name="initials" id="initials" class="text-input" />
+                <button class="btn startend" id="sumbit-score" type="submit">Enviar</button> </p>
+              </form>
+            </div>
+        </div>
+
+        <div id="high-score-container" class="hide">
+          <div class="high-scores container">
+            <h1 class="high-score">Mejores puntuaciones</h1>
+            <ol id="high-score-list" class="score-list"></ol>
+        <div>
+            <button class="btn" id="go-back">Volver</button>
+            <button class="btn" id="clear-high-scores">Limpiar</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="hide" id="correct">
+        <h2>Correcto :)!</h2>
+    </div>
+    <div class="hide" id="wrong">
+        <h2>Incorrecto :( </h2>
+    </div>
+
+    <script src="js/app.js"></script> 
+</body>
+</html>
